@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(14, 14, 12);
+    overflow: hidden; /* to remove downwards scrolbar */
+}
+.gamecontainer{
+border: 10px solid yellow;
+    width: 100vw;
+    height: 100vh;
+    background: url(background.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+    color: white;
+}
+
+.gameover{
+    position: relative;
+    align-items: center;
+    font-size: 2rem;
+    top: 7vh;
+    left: 33vw;
+    
+}
+.dino{
+    
+    background: url(hero2.png) no-repeat;
+    background-size: cover;
+    width: 8vw;
+    height: 10vw;
+    position: absolute;
+    bottom: 2vh;
+}
+
+.animateDino{
+    animation: dino 1.2s linear;
+}
+
+
+#scorecont{
+    position: relative;
+    font-size: 1.5rem;
+    left: 5vw;
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 500px;
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+
+.obstacle{
+    background: url(monster1.png) no-repeat;
+    background-size: cover;
+    width:11vw ;
+    height: 10vw;
+    position: absolute;
+    bottom: 1.8vh;
+    left: 40vw;
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
